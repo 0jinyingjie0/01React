@@ -11,11 +11,17 @@ module.exports={
     plugins:[
         htmlplugin
     ],
-    module:{
+    module:{ // 第三方的模块配置
         rules:[
             {
                 test:/\.js|jsx$/,use:'babel-loader',exclude:/node_modules/
             }
         ]
+    },
+    resolve:{ //默认补全后缀
+        extensions:['.js','.jsx','.json'],
+        alias:{
+            '@':path.join(__dirname, './src') //配置@符号，表示src根路径
+        }
     }
 }
