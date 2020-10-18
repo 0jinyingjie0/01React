@@ -1,0 +1,10 @@
+/* css模块化只针对类选择器和id选择器 */
+.title {
+    color: pink;
+    font-size: 20px;
+}
+
+/* 通过:global使类名不被模块化 */
+:global(.test) {
+    background-color: #fff;
+}
